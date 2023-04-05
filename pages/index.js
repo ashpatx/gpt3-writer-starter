@@ -44,25 +44,44 @@ const Home = () => {
             <h1>send a quick e-card today</h1>
           </div>
           <div className="header-subtitle">
-            <h2>share a lil message and make a person's day!</h2>
+            <h2>
+              share a lil poem and make your mom's day!
+              input some of her interests to personalize 🪄
+            </h2>
           </div>
         </div>
         <div className="prompt-container">
           <textarea 
             className="prompt-box"
-            placeholder="start typing here" 
+            placeholder="writing, painting, baking, running etc." 
             value={userInput}
             onChange={onUserChangedText}
           />
           <div className="prompt-buttons">
-            <a className="generate-button" onClick={callGenerateEndpoint}>
+            <a
+              className={isGenerating ? 'generate-button loading' : 'generate-button'}
+              onClick={callGenerateEndpoint}
+            >
               <div className="generate">
-                <p>Generate</p>
+              {isGenerating ? <span className="loader"></span> : <p>Generate</p>}
               </div>
             </a>
+            </div>
+          {apiOutput && (
+          <div className="output">
+            <div className="output-header-container">
+              <div className="output-header">
+                <h3>Output</h3>
+              </div>
+            </div>
+            <div className="output-content">
+              <p>{apiOutput}</p>
+            </div>
           </div>
-          </div>
+          )}
         </div>
+
+
       <div className="badge-container grow">
         <a
           href="https://buildspace.so/builds/ai-writer"
@@ -75,6 +94,7 @@ const Home = () => {
           </div>
         </a>
       </div>
+    </div>
     </div>
   );
 };
