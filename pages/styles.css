@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .root {
     display: flex;
     place-content: center flex-start;
     align-items: center;
-    background-color: rgb(0, 0, 0);
+    background-color: #3c4cad;
     flex-flow: column nowrap;
     gap: 10px;
     height: 100vh;
@@ -40,7 +40,7 @@ body {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    color: #FFF
+    color: #FFF;
 }
 
 .header-title {
@@ -50,8 +50,8 @@ body {
 
 .header-title h1 {
     width: 100%;
-    font-weight: 700;
-    font-size: 72px;
+    font-weight: 500;
+    font-size: 50px;
     letter-spacing: -4px;
     line-height: 1.2em;
     text-align: center;
@@ -60,10 +60,15 @@ body {
 
 .header-subtitle h2 {
     font-size: 20px;
+    text-align: center;
     font-style: normal;
     font-weight: 400;
     line-height: 1.4em;
     color: rgba(255, 255, 255, 0.75);
+}
+
+::placeholder {
+    color: rgba(255, 145, 144, 0.5);
 }
 
 .prompt-container {
@@ -93,7 +98,7 @@ body {
     flex: 0 0 auto;
     flex-flow: column nowrap;
     gap: 10px;
-    height: 150px;
+    height: 50px;
     overflow: hidden;
     padding: 20px;
     position: relative;
@@ -114,7 +119,7 @@ body {
 }
 
 textarea {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 
@@ -148,7 +153,7 @@ textarea {
 }
 
 .key-stroke p {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 145, 144, 0.75);
     flex: 0 0 auto;
     height: auto;
     position: relative;
@@ -172,7 +177,7 @@ textarea {
 .generate-button {
     place-content: flex-start;
     align-items: flex-start;
-    background-color: rgb(255, 79, 18);
+    background-color: rgba(255, 145, 144, 0.9);
     border-radius: 100px;
     display: flex;
     flex: 0 0 auto;
@@ -207,6 +212,18 @@ textarea {
     cursor: default;
 }
 
+/*.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  background-color: #ff9190;
+  color: #feffe0;
+  padding: 20px;
+  text-align: center;
+  font-size: 1vw;
+}*/
+
 .badge-container {
     display: flex;
     bottom: 20px;
@@ -219,14 +236,6 @@ textarea {
 }
 
 .badge-container a {
-    border-bottom-width: 1px;
-    border-color: rgba(255, 255, 255, 0.1);
-    border-left-width: 1px;
-    border-right-width: 1px;
-    border-style: solid;
-    border-top-width: 1px;
-    background-color: rgb(0, 0, 0);
-    border-radius: 54.3478% / 238.095%;
     filter: grayscale(1);
     transform: none;
     transform-origin: 50% 50% 0px;
@@ -249,8 +258,6 @@ textarea {
     height: 17px;
     image-rendering: pixelated;
     flex-shrink: 0;
-    fill: black;
-    color: black;
     transform: none;
     transform-origin: 50% 50% 0px;
     padding-right: 5px;
@@ -297,10 +304,10 @@ textarea {
 }
 
 .output-header h3 {
-    font-family: "Manrope", serif;
+    font-family: "Inter", serif;
     font-size: 28px;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 500;
     letter-spacing: 0px;
     line-height: 1.4em;
     text-align: start;
@@ -321,7 +328,7 @@ textarea {
 }
 
 .output-content p {
-    text-align: center;
+    text-align: left;
     white-space: pre-line;
     color: rgba(255, 255, 255, 0.5);
 }

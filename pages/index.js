@@ -36,18 +36,16 @@ const Home = () => {
   return (
     <div className="root">
       <Head>
-        <title>GPT-3 Writer | buildspace</title>
+        <title>GPT-3 Poems</title>
       </Head>
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>send a quick e-card today</h1>
+            <h1>send a lil poem today</h1>
           </div>
           <div className="header-subtitle">
-            <h2>
-              share a lil poem and make your mom's day!
-              input some of her interests to personalize 🪄
-            </h2>
+            <h2>share a poem and make someones day</h2>
+            <h2>input some of their interests to personalize 🪄</h2>
           </div>
         </div>
         <div className="prompt-container">
@@ -63,7 +61,7 @@ const Home = () => {
               onClick={callGenerateEndpoint}
             >
               <div className="generate">
-              {isGenerating ? <span className="loader"></span> : <p>Generate</p>}
+              {isGenerating ? <span className="loader"></span> : <p>generate</p>}
               </div>
             </a>
             </div>
@@ -71,7 +69,7 @@ const Home = () => {
           <div className="output">
             <div className="output-header-container">
               <div className="output-header">
-                <h3>Output</h3>
+                <h3>output</h3>
               </div>
             </div>
             <div className="output-content">
@@ -80,8 +78,6 @@ const Home = () => {
           </div>
           )}
         </div>
-
-
       <div className="badge-container grow">
         <a
           href="https://buildspace.so/builds/ai-writer"
@@ -90,7 +86,6 @@ const Home = () => {
         >
           <div className="badge">
             <Image src={buildspaceLogo} alt="buildspace logo" />
-            <p>build with buildspace</p>
           </div>
         </a>
       </div>

@@ -8,9 +8,9 @@ const openai = new OpenAIApi(configuration);
 
 const basePromptPrefix = 
 `
-Write me a creative mother's day poem in the style of J. K. Rowling mentioning the following interests. Please make sure the message and poem is detailed, well written and heartfelt.
+Write me a creative poem for a person I'm thinking about in the style of Pam Ayres mentioning the following interests. Please make sure the message and poem is personalized to this person based on their interests, well written and casual in tone. 
 
-Interests: 
+Their interests:
 `;
 const generateAction = async (req, res) => {
   // Run first prompt
